@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9,00"
+	Name="Template"
+	ProjectGUID="{ECB22CDC-E2EF-4A15-B60D-DBED57A24579}"
+	RootNamespace="Template"
+	Keyword="Win32Proj"
+	TargetFrameworkVersion="196613"
+>
+	<Platforms>
+		<Platform Name="Win32"/>
+	</Platforms>
+
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="2"
+			CharacterSet="1"
+		>
+			<Tool Name="VCCLCompilerTool"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;THREAD_EXPORTS"
+				RuntimeLibrary="3"
+				WarningLevel="3"
+				DebugInformationFormat="4"
+			/>
+
+			<Tool Name="VCLinkerTool"
+				LinkIncremental="2"
+				ModuleDefinitionFile="template.def"
+				GenerateDebugInformation="true"
+				SubSystem="2"
+				TargetMachine="1"
+			/>
+		</Configuration>
+
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="2"
+			CharacterSet="1"
+			WholeProgramOptimization="1"
+		>
+			<Tool Name="VCCLCompilerTool"
+				Optimization="2"
+				EnableIntrinsicFunctions="true"
+				AdditionalIncludeDirectories="./"
+				PreprocessorDefinitions="WIN32;NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				WarningLevel="3"
+				DebugInformationFormat="3"
+			/>
+
+			<Tool Name="VCLinkerTool"
+				OutputFile="..\plugins\$(ProjectName).dll"
+				LinkIncremental="1"
+				ModuleDefinitionFile="template.def"
+				GenerateDebugInformation="false"
+				SubSystem="2"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"
+			/>
+		</Configuration>
+	</Configurations>
+
+	<Files>
+		<Filter Name="SDK">
+			<File RelativePath=".\SDK\amxplugin.cpp"/>
+			<File RelativePath=".\SDK\plugincommon.h"/>
+			<Filter Name="amx">
+				<File RelativePath=".\SDK\amx\amx.h"/>
+				<File RelativePath=".\SDK\amx\sclinux.h"/>
+			</Filter>
+		</Filter>
+
+		<File RelativePath=".\main.cpp"/>
+		<File RelativePath=".\main.h"/>
+		<File RelativePath=".\template.def"/>
+		<File RelativePath=".\template.rc"/>
+	</Files>
+</VisualStudioProject>
