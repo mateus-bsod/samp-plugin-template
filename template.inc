@@ -3,7 +3,7 @@
     template-plugin
          Copyright © 2026 by Mateus Mesquita Lima
 
-    -» Author    	       : Mateus Mesquita Lima / mateus-bsod
+    -» Author    	       : Mateus Mesquita Lima
     -» Release Date	       : 15 Jan 2026
     -» Description	       : Include / Plugin
 
